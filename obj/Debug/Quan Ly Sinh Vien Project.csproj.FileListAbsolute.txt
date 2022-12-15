@@ -1,0 +1,89 @@
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan Ly Sinh Vien Project.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.Properties.Resources.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan Ly Sinh Vien Project.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan Ly Sinh Vien Project.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\Quan Ly Sinh Vien Project.exe.config
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\Quan Ly Sinh Vien Project.exe
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\Quan Ly Sinh Vien Project.pdb
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan Ly Sinh Vien Project.exe
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan Ly Sinh Vien Project.pdb
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.RJControl.RJTextBoxcs.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmMainMenu.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.frmKhoa.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.frmMonHoc.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\CircularProgressBar.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\WinFormAnimation.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\CircularProgressBar.xml
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FormLoading.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan Ly Sinh Vien Project.csproj.CopyComplete
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\GumroadLicensing.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\NavigationMenu.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmDangNhap.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.frmHocSinh.resources
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\EPPlus.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\EPPlus.xml
+C:\Users\user\source\repos\Quan Ly Sinh Vien Project\Quan Ly Sinh Vien Project\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+E:\QuanLyHocSinh\bin\Debug\Quan Ly Sinh Vien Project.exe.config
+E:\QuanLyHocSinh\bin\Debug\Quan Ly Sinh Vien Project.exe
+E:\QuanLyHocSinh\bin\Debug\Quan Ly Sinh Vien Project.pdb
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmDangNhap.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FormLoading.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmMainMenu.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.frmMonHoc.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.frmHocSinh.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.Properties.Resources.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.RJControl.RJTextBoxcs.resources
+E:\QuanLyHocSinh\obj\Debug\Quan Ly Sinh Vien Project.csproj.GenerateResource.cache
+E:\QuanLyHocSinh\obj\Debug\Quan Ly Sinh Vien Project.csproj.CoreCompileInputs.cache
+E:\QuanLyHocSinh\obj\Debug\Quan Ly Sinh Vien Project.csproj.CopyComplete
+E:\QuanLyHocSinh\obj\Debug\Quan Ly Sinh Vien Project.exe
+E:\QuanLyHocSinh\obj\Debug\Quan Ly Sinh Vien Project.pdb
+E:\QuanLyHocSinh\bin\Debug\Microsoft.Win32.Registry.xml
+E:\QuanLyHocSinh\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+E:\QuanLyHocSinh\bin\Debug\Microsoft.Win32.SystemEvents.xml
+E:\QuanLyHocSinh\bin\Debug\RestSharp.xml
+E:\QuanLyHocSinh\bin\Debug\System.Buffers.xml
+E:\QuanLyHocSinh\bin\Debug\System.CodeDom.xml
+E:\QuanLyHocSinh\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\QuanLyHocSinh\bin\Debug\System.Data.Odbc.xml
+E:\QuanLyHocSinh\bin\Debug\System.Data.OleDb.xml
+E:\QuanLyHocSinh\bin\Debug\System.Data.SqlClient.xml
+E:\QuanLyHocSinh\bin\Debug\System.Diagnostics.EventLog.xml
+E:\QuanLyHocSinh\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+E:\QuanLyHocSinh\bin\Debug\System.Drawing.Common.xml
+E:\QuanLyHocSinh\bin\Debug\System.IO.FileSystem.AccessControl.xml
+E:\QuanLyHocSinh\bin\Debug\System.IO.Packaging.xml
+E:\QuanLyHocSinh\bin\Debug\System.IO.Ports.xml
+E:\QuanLyHocSinh\bin\Debug\System.Memory.xml
+E:\QuanLyHocSinh\bin\Debug\System.Numerics.Vectors.xml
+E:\QuanLyHocSinh\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\QuanLyHocSinh\bin\Debug\System.Security.AccessControl.xml
+E:\QuanLyHocSinh\bin\Debug\System.Security.Cryptography.Cng.xml
+E:\QuanLyHocSinh\bin\Debug\System.Security.Cryptography.Pkcs.xml
+E:\QuanLyHocSinh\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+E:\QuanLyHocSinh\bin\Debug\System.Security.Cryptography.Xml.xml
+E:\QuanLyHocSinh\bin\Debug\System.Security.Permissions.xml
+E:\QuanLyHocSinh\bin\Debug\System.Security.Principal.Windows.xml
+E:\QuanLyHocSinh\bin\Debug\System.ServiceModel.Syndication.xml
+E:\QuanLyHocSinh\bin\Debug\System.ServiceProcess.ServiceController.xml
+E:\QuanLyHocSinh\bin\Debug\System.Text.Encoding.CodePages.xml
+E:\QuanLyHocSinh\bin\Debug\System.Threading.AccessControl.xml
+E:\QuanLyHocSinh\obj\Debug\Quan Ly Sinh Vien Project.csproj.Fody.CopyLocal.cache
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.frmLop.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmDiem.resources
+E:\QuanLyHocSinh\bin\Debug\EntityFramework.xml
+E:\QuanLyHocSinh\bin\Debug\LiveCharts.xml
+E:\QuanLyHocSinh\bin\Debug\LiveCharts.WinForms.xml
+E:\QuanLyHocSinh\bin\Debug\LiveCharts.Wpf.xml
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmUser.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmAdmin.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmGiaoVien.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.frmHocPhi.resources
+E:\QuanLyHocSinh\obj\Debug\Quan Ly Sinh Vien Project.csproj.AssemblyReference.cache
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmUser2.resources
+E:\QuanLyHocSinh\obj\Debug\Quan_Ly_Sinh_Vien_Project.GUI.FrmUser3.resources
