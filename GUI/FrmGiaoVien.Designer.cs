@@ -554,6 +554,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(92, 63);
             this.btnTimkiem.TabIndex = 24;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             this.btnTimkiem.TextColor = System.Drawing.Color.White;
             this.btnTimkiem.UseVisualStyleBackColor = false;
             // 

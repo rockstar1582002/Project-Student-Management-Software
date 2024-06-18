@@ -12,7 +12,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
     {
         public static SqlConnection getconnect()
         {
-            string strconn = "Data Source=DESKTOP-UOLK6O3\\SQLEXPRESS01;Initial Catalog=ProJect_Quan_Ly_HocSinh;Integrated Security=True";
+            string strconn = "Data Source=LAPTOP-I2IUK1M1\\SQLEXPRESS01;Initial Catalog=ProJect_Quan_Ly_HocSinh;Integrated Security=True";
             SqlConnection conn = new SqlConnection(strconn);
             return conn;
            
@@ -34,7 +34,76 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
              return new SqlConnection(conn);
          }
         */
-       public static string CheckLogin(Account acc)
+        
+    
+        public bool DangKy(Account acc)
+        {
+            string sql = "INSERT INTO dbo.Acc(Username,Pass,Gmail)VALUES(@Username,@Pass,@Gmail)";
+            SqlConnection conn = SqlConDB.getconnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@Username", SqlDbType.NVarChar).Value = acc.Username;
+                cmd.Parameters.Add("@Pass", SqlDbType.NVarChar).Value = acc.Pass;
+                cmd.Parameters.Add("@Gmail", SqlDbType.NVarChar).Value = acc.Gmail;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }catch(Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+       
+
+        public bool UserNameCheck(Account acc)
+        {
+
+            SqlConnection con = SqlConDB.getconnect();
+            SqlCommand cmd = new SqlCommand("Select count(*) from Acc where Username= @Username", con);
+            cmd.Parameters.AddWithValue("@Username", acc.Username);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if (dr.HasRows)
+                {
+                    dr[0].ToString();
+                    return true;
+                }
+                dr.Close();
+                con.Close();
+
+            }
+           
+            return false;
+           
+        }
+       /* public bool GmailCheck(Account acc)
+        {
+            SqlConnection con = SqlConDB.getconnect();
+            SqlCommand cmd = new SqlCommand("Select count(*) from Acc where Gmail= @Gmail", con);
+           
+            cmd.Parameters.AddWithValue("@Gmail", acc.Gmail);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                if (dr.HasRows)
+                {
+                    dr[0].ToString();
+                    return true;
+                }
+                dr.Close();
+                con.Close();
+
+            }
+            return false;
+        }
+      */
+        public static string CheckLogin(Account acc)
         {
          
             string user = null;
@@ -50,26 +119,17 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
             if (reader.HasRows)
             {
                 reader.Read();
-                if(reader[2].ToString()=="admin")
+                if(reader[0].ToString()=="admin1234")
                 {
                    SqlConDB.type = "A";
                    user = reader.GetString(0);
                 }
-                else if(reader[2].ToString()=="user1")
+                else 
                 {
                      SqlConDB.type = "U";
                     user = reader.GetString(0);
                 }
-                else if(reader[2].ToString()=="user2")
-                {
-                    SqlConDB.type = "U2";
-                    user = reader.GetString(0);
-                }
-                else if(reader[2].ToString()=="user3")
-                {
-                    SqlConDB.type = "U3";
-                    user = reader.GetString(0);
-                }
+               
                 reader.Close();
                 conn.Close();
             }

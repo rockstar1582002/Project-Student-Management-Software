@@ -98,9 +98,9 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
             }
             return true;
         }
-        public DataTable TimKiemGV(int gv)
+        public DataTable TimKiemGV(string gv)
         {
-            string sql = "Select * from dbo.Giaovien where Magv='" + gv + "'";
+            string sql = "Select * from dbo.Giaovien where Tengv='" + gv + "'";
             SqlConnection conn = SqlConDB.getconnect();
             da = new SqlDataAdapter(sql, conn);
             conn.Open();

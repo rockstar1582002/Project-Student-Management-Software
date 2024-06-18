@@ -11,9 +11,10 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Quan_Ly_Sinh_Vien_Project.DTO;
 using Quan_Ly_Sinh_Vien_Project.DAO;
+using NUnit.Framework;
+
 namespace Quan_Ly_Sinh_Vien_Project.GUI
 {
-    
     public partial class FrmDangNhap : Form
     {
         Boolean flag;
@@ -29,6 +30,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
         }
+
 
         private void btnLogin_MouseEnter(object sender, EventArgs e)
         {
@@ -171,6 +173,18 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                     timer1.Stop();
                 }
             }
+        }
+
+        private void txtUserName__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            FrmDangKy dk = new FrmDangKy();
+            dk.Show();
+            this.Hide();
         }
     }
 }

@@ -353,6 +353,16 @@ namespace Quan_Ly_Sinh_Vien_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mail2 {
+            get {
+                object obj = ResourceManager.GetObject("mail2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mat2_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Mat2-removebg-preview", resourceCulture);
@@ -436,6 +446,16 @@ namespace Quan_Ly_Sinh_Vien_Project.Properties {
         internal static System.Drawing.Bitmap pass1 {
             get {
                 object obj = ResourceManager.GetObject("pass1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pass11 {
+            get {
+                object obj = ResourceManager.GetObject("pass11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

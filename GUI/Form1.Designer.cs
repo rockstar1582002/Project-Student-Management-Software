@@ -49,6 +49,8 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -120,6 +122,8 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelLogin.Controls.Add(this.label6);
+            this.panelLogin.Controls.Add(this.label5);
             this.panelLogin.Controls.Add(this.pic2);
             this.panelLogin.Controls.Add(this.lblwarning);
             this.panelLogin.Controls.Add(this.label1);
@@ -280,6 +284,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             this.txtUserName.TabIndex = 3;
             this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = false;
+            this.txtUserName._TextChanged += new System.EventHandler(this.txtUserName__TextChanged);
             // 
             // pictureBox1
             // 
@@ -314,6 +319,29 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Snow;
+            this.label5.Location = new System.Drawing.Point(151, 246);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(224, 22);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Bạn Chưa Có Tài Khoản?";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gold;
+            this.label6.Location = new System.Drawing.Point(381, 247);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 22);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Đăng Ký";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // FrmDangNhap
             // 
@@ -368,6 +396,8 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
         private System.Windows.Forms.Label lblwarning;
         private System.Windows.Forms.PictureBox pic2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

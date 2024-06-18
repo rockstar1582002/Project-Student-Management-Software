@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Quan_Ly_Sinh_Vien_Project.DAO
 {
@@ -31,7 +32,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
         }
         public bool ThemHS(DTO.HocSinh hs)
         {
-            string sql = "INSERT INTO dbo.HOCSINH(IDHS,TenHS,DiaChi,NgaySinh,GioiTinh,TenDanToc,Malop,Tenlop,Makq,TenDN)VALUES(@IDHS,@TenHS,@DiaChi,@NgaySinh,@GioiTinh,@TenDanToc,@Malop,@Tenlop,@Makq,@TenDN)";
+            string sql = "INSERT INTO dbo.HOCSINH(IDHS,TenHS,DiaChi,NgaySinh,GioiTinh,TenDanToc,Malop,Tenlop,Makq,TenDN) VALUES(@IDHS,@TenHS,@DiaChi,@NgaySinh,@GioiTinh,@TenDanToc,@Malop,@Tenlop,@Makq,@Username)";
             SqlConnection sqlcon = SqlConDB.getconnect();
             try
             {
@@ -40,18 +41,18 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
                 sqlcmd.Parameters.Add("@IDHS", SqlDbType.NVarChar).Value = hs.IDHS;
                 sqlcmd.Parameters.Add("@TenHS", SqlDbType.NVarChar).Value = hs.TenHS;
                 sqlcmd.Parameters.Add("@DiaChi", SqlDbType.NVarChar).Value = hs.DiaChi;
-                sqlcmd.Parameters.Add("@NgaySinh", SqlDbType.NVarChar).Value = hs.NgaySinh.ToShortDateString();
+                sqlcmd.Parameters.Add("@NgaySinh", SqlDbType.Date).Value = hs.NgaySinh.ToShortDateString();
                 sqlcmd.Parameters.Add("@GioiTinh", SqlDbType.NVarChar).Value = hs.GioiTinh;
                 sqlcmd.Parameters.Add("@TenDanToc", SqlDbType.NVarChar).Value = hs.TenDanToc;
                 sqlcmd.Parameters.Add("@Malop", SqlDbType.Int).Value = hs.Malop;
                 sqlcmd.Parameters.Add("@Tenlop", SqlDbType.NVarChar).Value = hs.Tenlop;
                 sqlcmd.Parameters.Add("@Makq", SqlDbType.NVarChar).Value = hs.Makq;
-                sqlcmd.Parameters.Add("@TenDN", SqlDbType.NVarChar).Value = hs.TenDN;
+                sqlcmd.Parameters.Add("@Username", SqlDbType.NVarChar).Value = hs.TenDN;
 
 
                 sqlcmd.ExecuteNonQuery();
                 sqlcon.Close();
-            }catch(Exception)
+            }catch(Exception e)
             {
                 return false;
             }
@@ -85,7 +86,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
                 sqlcmd.Parameters.Add("@IDHS", SqlDbType.NVarChar).Value = hs.IDHS;
                 sqlcmd.Parameters.Add("@TenHS", SqlDbType.NVarChar).Value = hs.TenHS;
                 sqlcmd.Parameters.Add("@DiaChi", SqlDbType.NVarChar).Value = hs.DiaChi;
-                sqlcmd.Parameters.Add("@NgaySinh", SqlDbType.NVarChar).Value = hs.NgaySinh.ToShortDateString();
+                sqlcmd.Parameters.Add("@NgaySinh", SqlDbType.Date).Value = hs.NgaySinh.ToShortDateString();
                 sqlcmd.Parameters.Add("@GioiTinh", SqlDbType.NVarChar).Value = hs.GioiTinh;
                 sqlcmd.Parameters.Add("@TenDanToc", SqlDbType.NVarChar).Value = hs.TenDanToc;
                 sqlcmd.Parameters.Add("@Malop", SqlDbType.Int).Value = hs.Malop;

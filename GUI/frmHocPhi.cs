@@ -84,23 +84,34 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             comboTenHS.DataSource = dt;
             conn.Close();
         }
-     
-    /* private void getTenHS1()
+
+        private void dtgvHP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            SqlConnection conn = SqlConDB.getconnect();
-            string sql = "Select * from HocSinh where IDHS=" + ComboIDHS.SelectedIndex.ToString() + "";
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                comboTenHS.Texts = dr["TenHS"].ToString();
-            }
-            conn.Close();
+            txtIDHP.Texts = dtgvHP.Rows[e.RowIndex].Cells[0].Value.ToString();
+            ComboIDHS.Texts = dtgvHP.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboTenHS.Texts = dtgvHP.Rows[e.RowIndex].Cells[2].Value.ToString();
+            cbIDlop.Texts = dtgvHP.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtSotiet.Texts = dtgvHP.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtTienHoc.Texts = dtgvHP.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtTongTien.Texts = dtgvHP.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
-        */
+
+        /* private void getTenHS1()
+            {
+                SqlConnection conn = SqlConDB.getconnect();
+                string sql = "Select * from HocSinh where IDHS=" + ComboIDHS.SelectedIndex.ToString() + "";
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    comboTenHS.Texts = dr["TenHS"].ToString();
+                }
+                conn.Close();
+            }
+            */
         private void showListHocPhi()
         {
             System.Data.DataTable dt = bushocphi.getdsHocPhi();
@@ -123,20 +134,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 btnEdit.Enabled = false;
                 btnExcel.Enabled = true;
             }
-            else if (SqlConDB.type == "U2")
-            {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
-            else if (SqlConDB.type == "U3")
-            {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
+           
             showListHocPhi();
         }
         public void Reset()

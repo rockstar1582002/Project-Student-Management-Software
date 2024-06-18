@@ -58,7 +58,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
         
         public DataTable TimKiemHSKha()
         {
-            string sql = "Select * from dbo.Diem where diemhk<8.0 ";
+            string sql = "Select * from dbo.Diem where diemTB >=6.5 and diemTB <8.0 ";
             SqlConnection conn = SqlConDB.getconnect();
             da = new SqlDataAdapter(sql, conn);
             conn.Open();
@@ -69,7 +69,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
         }
         public DataTable TimKiemHSTB()
         {
-            string sql = "Select * from dbo.Diem where diemhk<6.5 ";
+            string sql = "Select * from dbo.Diem where diemTB >=5 and diemTB <6.5 ";
             SqlConnection conn = SqlConDB.getconnect();
             da = new SqlDataAdapter(sql, conn);
             conn.Open();
@@ -80,7 +80,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
         }
         public DataTable TimKiemHSGioi()
         {
-            string sql = "Select * from dbo.Diem where diemhk>=8.0 AND diemkt45p>=9.0 ";
+            string sql = "Select * from dbo.Diem where diemTB >=8.0 or diemTB >=9.0 ";
             SqlConnection conn = SqlConDB.getconnect();
             da = new SqlDataAdapter(sql, conn);
             conn.Open();
@@ -91,7 +91,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
         }
         public DataTable TimKiemHSThiLai()
         {
-            string sql = "Select * from dbo.Diem where diemhk<5.0";
+            string sql = "Select * from dbo.Diem where diemTB <5.0";
             SqlConnection conn = SqlConDB.getconnect();
             da = new SqlDataAdapter(sql, conn);
             conn.Open();

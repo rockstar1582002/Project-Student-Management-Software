@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -95,8 +96,18 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             cboChucVu.Texts = null;
             cboIDMH.Text = "";
         }
+        public bool checkValidation(string ac)
+        {
+            return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,24}$");
+        }
+
+        public bool checkValidationgmail(string gm)
+        {
+            return Regex.IsMatch(gm, @"^[a-zA-Z0-9_.]{3,25}@gmail.com(.vn|)$");
+        }
         private void btnADD_Click(object sender, EventArgs e)
         {
+            string namegm = txtEmail.Texts;
             DataTable dt = busgv.getds();
             int[] mangid = new int[dt.Rows.Count];
             int id;
@@ -119,7 +130,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             if (txtTenGV.Texts == "" || txtTenMH.Texts == "" || txtDiaChi.Texts == "" || txtEmail.Texts == ""
                || txtSDT.Texts == "" || cboIDMH.Text == null && cboChucVu.Texts == null)
             {
-                MessageBox.Show("Khong Duoc bo Trong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không được bỏ trống", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnADD.Enabled = false;
                 btnADD.Enabled = true;
                 btnDelete.Enabled = false;
@@ -129,6 +140,32 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 btnExcel.Enabled = false;
                 btnExcel.Enabled = true;
             }
+            else if(txtTenGV.Texts.Equals("!@#$%^&*()_-+={[}]|><./?")|| txtSDT.Texts.Equals("!@#$%^&*()_-+={[}]|><./?")||txtDiaChi.Texts.Equals("!@#$%^&*()_-+={[}]|><.?"))
+            {
+                MessageBox.Show("Không chứa ký tự đặc biệt", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnADD.Enabled = false;
+                btnADD.Enabled = true;
+                btnDelete.Enabled = false;
+                btnDelete.Enabled = true;
+                btnEdit.Enabled = false;
+                btnEdit.Enabled = true;
+                btnExcel.Enabled = false;
+                btnExcel.Enabled = true;
+            }
+            else if(!checkValidationgmail(namegm))
+            {
+                MessageBox.Show("Vui lòng nhập đúng định dạng gmail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnADD.Enabled = false;
+                btnADD.Enabled = true;
+                btnDelete.Enabled = false;
+                btnDelete.Enabled = true;
+                btnEdit.Enabled = false;
+                btnEdit.Enabled = true;
+                btnExcel.Enabled = false;
+                btnExcel.Enabled = true;
+            }
+          
+           
             else
             {
                 DTO.GiaoVien gv = new DTO.GiaoVien();
@@ -219,13 +256,31 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
         {
             txtIDGV.Texts =dtgvGiaoVien.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtTenGV.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[1].Value.ToString();
-
-            txtTenMH.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtEmail.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtSDT.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtDiaChi.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cboChucVu.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+            cboIDMH.Text = dtgvGiaoVien.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtTenMH.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtEmail.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtSDT.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtDiaChi.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[6].Value.ToString();
+            cboChucVu.Texts = dtgvGiaoVien.Rows[e.RowIndex].Cells[7].Value.ToString();
           
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            DTO.GiaoVien gv = new DTO.GiaoVien();
+            gv.Tengv = txtTenGV.Texts;
+            string value = txtTimkiem.Texts;
+
+            if (!string.IsNullOrEmpty(value))
+            {
+                DataTable dt = busgv.TimKiemGV(value);
+                dtgvGiaoVien.DataSource = dt;
+
+            }
+            else
+            {
+                showlistGiaoVien();
+            }
         }
 
         private void btnExcel_Click(object sender, EventArgs e)

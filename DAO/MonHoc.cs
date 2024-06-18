@@ -19,7 +19,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DAO
         }
         public DataTable getdsMonHoc()
         {
-            string sql = "Select * from MonHoc";
+            string sql = "Select * from Monhoc";
             SqlConnection con = SqlConDB.getconnect();
             da = new SqlDataAdapter(sql, con);
             con.Open();

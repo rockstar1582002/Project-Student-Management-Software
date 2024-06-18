@@ -30,7 +30,7 @@ namespace Quan_Ly_Sinh_Vien_Project.BUS
         {
             return daogv.SuaGV(gv);
         }
-        public DataTable TimKiemGV(int gv)
+        public DataTable TimKiemGV(string gv)
         {
             return daogv.TimKiemGV(gv);
         }

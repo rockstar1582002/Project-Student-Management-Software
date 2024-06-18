@@ -72,20 +72,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 btnEdit.Enabled = false;
                 btnExcel.Enabled = true;
             }
-            else if (SqlConDB.type == "U2")
-            {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
-            else if (SqlConDB.type == "U3")
-            {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
+          
         }
         public void Reset()
         {
@@ -233,6 +220,14 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
         private void cboIDGV_SelectionChangeCommitted(object sender, EventArgs e)
         {
             getTen();
+        }
+
+        private void dtgvLop_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIDLop.Texts = dtgvLop.Rows[e.RowIndex].Cells[0].Value.ToString();
+            cboTenLop.Texts = dtgvLop.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtGhiChu.Texts = dtgvLop.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtGVCN.Texts = dtgvLop.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void btnExcel_Click(object sender, EventArgs e)

@@ -109,13 +109,13 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 chart1.ChartAreas["ChartArea1"].AxisY.Title = "DiemTB";
                 chart1.ChartAreas["ChartArea1"].AxisY.TitleForeColor = Color.Gold;
                 chart1.ChartAreas["ChartArea1"].AxisX.Interval = 1;
-               // chart1.Series.Add("DiemTB");
+                chart1.Series.Add("DiemTB");
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     chart1.Series["XepLoai"].Points.AddXY(dt.Rows[i]["XepLoai"],dt.Rows[i]["diemTB"]);
                    
-                    //, dt.Rows[i]["TenTonGiao"]);
-                   //, dt.Rows[i]["TenTonGiao"]);
+                //dt.Rows[i]["TenTonGiao"]);
+                //   //, dt.Rows[i]["TenTonGiao"]);
                 }
                 conn.Close();
                 

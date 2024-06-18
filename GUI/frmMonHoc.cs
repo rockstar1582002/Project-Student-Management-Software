@@ -105,20 +105,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 btnEdit.Enabled = false;
                 btnExcel.Enabled = true;
             }
-            else if (SqlConDB.type == "U2")
-            {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
-            else if (SqlConDB.type == "U3")
-            {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
+        
             showlistMonHoc();
         }
 
@@ -151,6 +138,13 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             {
                 MessageBox.Show("Co Loi Xay Ra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dtgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIDMonHoc.Texts = dtgvMonHoc.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtTenMonHoc.Texts = dtgvMonHoc.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cboTrangThai.Texts = dtgvMonHoc.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
         private void btnExcel_Click(object sender, EventArgs e)

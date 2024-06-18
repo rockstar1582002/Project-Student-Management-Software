@@ -63,7 +63,6 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             this.btnEdit = new Quan_Ly_Sinh_Vien_Project.UIConTrol.RJButton2();
             this.btnDelete = new Quan_Ly_Sinh_Vien_Project.UIConTrol.RJButton2();
             this.btnADD = new Quan_Ly_Sinh_Vien_Project.UIConTrol.RJButton2();
-            this.btnImport = new Quan_Ly_Sinh_Vien_Project.UIConTrol.RJButton2();
             this.panelInFo.SuspendLayout();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHocSinh)).BeginInit();
@@ -445,7 +444,6 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             // panelData
             // 
             this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelData.Controls.Add(this.btnImport);
             this.panelData.Controls.Add(this.dtgvHocSinh);
             this.panelData.Controls.Add(this.btnExcel);
             this.panelData.Controls.Add(this.label1);
@@ -461,12 +459,12 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             // dtgvHocSinh
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Fuchsia;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Fuchsia;
             this.dtgvHocSinh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Fuchsia;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Mongolian Baiti", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Fuchsia;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -614,27 +612,6 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
             this.btnADD.MouseLeave += new System.EventHandler(this.btnADD_MouseLeave);
             this.btnADD.MouseHover += new System.EventHandler(this.rjButton21_MouseHover);
             // 
-            // btnImport
-            // 
-            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnImport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnImport.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnImport.BorderRadius = 20;
-            this.btnImport.BorderSize = 2;
-            this.btnImport.FlatAppearance.BorderSize = 0;
-            this.btnImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.White;
-            this.btnImport.Image = global::Quan_Ly_Sinh_Vien_Project.Properties.Resources.Excel2;
-            this.btnImport.Location = new System.Drawing.Point(447, 400);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(110, 56);
-            this.btnImport.TabIndex = 25;
-            this.btnImport.TextColor = System.Drawing.Color.White;
-            this.btnImport.UseVisualStyleBackColor = false;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
-            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,6 +664,5 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
         private System.Windows.Forms.ComboBox cboIDLop;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
-        private UIConTrol.RJButton2 btnImport;
     }
 }

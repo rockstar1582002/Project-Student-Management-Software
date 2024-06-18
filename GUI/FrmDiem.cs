@@ -180,9 +180,14 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                             diem.XepLoai = "Khá";
                             txtXepLoai.Texts = diem.XepLoai.ToString();
                         }
-                        else
+                        else if (diem.diemtb >= 5 && diem.diemtb < 6.5)
                         {
                             diem.XepLoai = "Trung Bình";
+                            txtXepLoai.Texts = diem.XepLoai.ToString();
+                        }
+                        else 
+                        {
+                            diem.XepLoai = "Thi lại";
                             txtXepLoai.Texts = diem.XepLoai.ToString();
                         }
                         diem.Hocky = cboHocKi.Texts;

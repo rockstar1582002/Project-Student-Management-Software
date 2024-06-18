@@ -30,14 +30,14 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
        private void getTDN()
         {
             SqlConnection conn = SqlConDB.getconnect();
-            string sql = "Select TenDN from Acc ";
+            string sql = "Select Username from Acc ";
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
-            dt.Columns.Add("TenDN", typeof(string));
+            dt.Columns.Add("Username", typeof(string));
             dt.Load(reader);
-            CboTenDN.ValueMember = "TenDN";
+            CboTenDN.ValueMember = "Username";
             CboTenDN.DataSource = dt;
             conn.Close();
         }
@@ -161,20 +161,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 btnEdit.Enabled = false;
                 btnExcel.Enabled = false;
             }
-            else if(SqlConDB.type=="U2")
-            {
-                btnADD.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
-            else if(SqlConDB.type=="U3")
-            {
-                btnADD.Enabled = false;
-                btnDelete.Enabled = false;
-                btnEdit.Enabled = false;
-                btnExcel.Enabled = false;
-            }
+           
             showlistHocSinh();
         }
         private void Reset()
@@ -222,9 +209,9 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 txtIDHS.Texts = "HS" + (chuoi2 + 1).ToString();
             */
             if (txtTenHS.Texts == "" || txtMaDanToc.Texts == "" || txtDiaChi.Texts == "" || dtpNgaySinh.Value == null
-                || txtMaDanToc.Texts == "" || radioNam == null && radioNu == null)
+                || txtMaDanToc.Texts == "" || radioNam.Checked==false&&radioNu.Checked==false||cboIDLop.Text==""||cboMakq.Text==""||CboTenDN.Text=="")
             {
-                MessageBox.Show("Khong Duoc bo Trong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không Được Bỏ Trống", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnADD.Enabled = false;
                 btnADD.Enabled = true;
                 btnDelete.Enabled = false;
@@ -234,6 +221,32 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
                 btnExcel.Enabled = false;
                 btnExcel.Enabled = true;
             }
+            else if (txtTenHS.Texts.Equals("!@#$%^&*():'<>?+=-_") || txtMaDanToc.Texts.Equals("!@#$%^&*():'<>?+=-_") )
+            {
+                MessageBox.Show("Thông tin cá nhân không có ký tự đặc biệt","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnADD.Enabled = false;
+                btnADD.Enabled = true;
+                btnDelete.Enabled = false;
+                btnDelete.Enabled = true;
+                btnEdit.Enabled = false;
+                btnEdit.Enabled = true;
+                btnExcel.Enabled = false;
+                btnExcel.Enabled = true;
+
+            }
+            else if(txtDiaChi.Texts.Length<10||txtDiaChi.Texts.Equals("!@#$%^&*()_+=-_"))
+            {
+                MessageBox.Show("Địa Chỉ Trên 10 Ký Tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnADD.Enabled = false;
+                btnADD.Enabled = true;
+                btnDelete.Enabled = false;
+                btnDelete.Enabled = true;
+                btnEdit.Enabled = false;
+                btnEdit.Enabled = true;
+                btnExcel.Enabled = false;
+                btnExcel.Enabled = true;
+            }
+             
             else
             {
                 DTO.HocSinh hs = new DTO.HocSinh();
@@ -439,9 +452,14 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
 
             txtDiaChi.Texts = dtgvHocSinh.Rows[e.RowIndex].Cells[2].Value.ToString();
 
-            txtMaDanToc.Texts = dtgvHocSinh.Rows[e.RowIndex].Cells[3].Value.ToString();
-           
-           
+            txtMaDanToc.Texts = dtgvHocSinh.Rows[e.RowIndex].Cells[5].Value.ToString();
+            radioNam.Checked = dtgvHocSinh.Rows[e.RowIndex].Cells[4].Value.ToString().ToLower().Equals("nam");
+            radioNu.Checked = dtgvHocSinh.Rows[e.RowIndex].Cells[4].Value.ToString().ToLower().Equals("nữ");
+            txtTenLop.Texts = dtgvHocSinh.Rows[e.RowIndex].Cells[7].Value.ToString();
+            cboIDLop.Text = dtgvHocSinh.Rows[e.RowIndex].Cells[6].Value.ToString();
+            cboMakq.Text = dtgvHocSinh.Rows[e.RowIndex].Cells[8].Value.ToString();
+            CboTenDN.Text = dtgvHocSinh.Rows[e.RowIndex].Cells[9].Value.ToString();
+
         }
 
         private void txtQuyen__TextChanged(object sender, EventArgs e)

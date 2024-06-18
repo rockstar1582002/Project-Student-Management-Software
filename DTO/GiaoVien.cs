@@ -16,7 +16,7 @@ namespace Quan_Ly_Sinh_Vien_Project.DTO
 	[Diachi] [nvarchar] (250) NULL,
 	[Status] [nvarchar] (3) NULL,
 	*/
-	public int    Magv { get; set; }
+	public int Magv { get; set; }
 	public string Tengv { get; set; }
 	public int    Mamh { get; set; }
 	public string Tenmh { get; set; }

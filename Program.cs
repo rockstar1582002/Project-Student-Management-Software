@@ -17,7 +17,7 @@ namespace Quan_Ly_Sinh_Vien_Project.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.FrmDangNhap());
+            Application.Run(new GUI.FrmWait());
         }
     }
 }
